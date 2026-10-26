@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=75.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tierlense-backend"
+version = "0.2.0"
+description = "Backend foundation for TierLense supply-chain intelligence"
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+  "fastapi>=0.115,<1.0",
+  "uvicorn[standard]>=0.34,<1.0",
+  "sqlalchemy>=2.0,<3.0",
+  "alembic>=1.14,<2.0",
+  "psycopg[binary]>=3.2,<4.0",
+  "pydantic-settings>=2.7,<3.0",
+  "httpx>=0.28,<1.0",
+  "beautifulsoup4>=4.12,<5.0",
+  "pypdf>=5.0,<7.0",
+  "groq>=1.7,<2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "httpx>=0.28,<1.0",
+  "pytest>=8.3,<10.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-ra"

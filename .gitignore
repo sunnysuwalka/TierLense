@@ -1,0 +1,33 @@
+﻿# Python
+**/.venv/
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.coverage*
+
+# Node
+**/node_modules/
+**/dist/
+**/.vite/
+
+# Secrets: never commit real environment files
+**/.env
+**/.env.*
+!**/.env.example
+
+# Local databases and logs
+**/*.db
+**/*.sqlite
+**/*.sqlite3
+**/*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local test outputs and backups
+tierlense-backend/tierlense_nvidia_graph_label_backup_*.json
+tierlense-backend/tierlense_s2_live_test_*.json
+**/*.py.bak
